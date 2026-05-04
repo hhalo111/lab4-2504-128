@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鲁大图书</title>
+    <link rel="stylesheet" href="css/test.css">
+</head>
+<body>
+
+<div class="login-modal" id="loginModal">
+    <div id="login">
+        <div class="header">
+            <ul class="pass">
+                <li>
+                    <a href="javascript:;" id="loginTab" class="active" onclick="showTab('loginForm')">密码登录</a>
+                    <span class="line">|</span>
+                </li>
+                <li><a href="javascript:;" id="regTab" onclick="showTab('regForm')">用户注册</a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="form" id="loginForm">
+                <input type="text" id="loginUser" placeholder="请输入用户名/邮箱">
+                <div style="position:relative;">
+                    <input type="password" id="loginPwd" placeholder="请输入密码">
+                    <span onclick="togglePwd('loginPwd')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);cursor:pointer;font-size:12px;color:#8c6d31;">显示</span>
+                </div>
+
+                <div class="code-row">
+                    <input type="text" class="code-input" placeholder="请输入验证码">
+                    <div class="code-img">验证码</div>
+                </div>
+
+                <p class="agree">登录即同意<a href="#">用户协议</a>、<a href="#">隐私政策</a></p>
+
+                <div class="but">
+                    <input type="button" value="登录" onclick="userLogin()">
+                </div>
+
+                <ul class="register">
+                    <li><a href="javascript:;" onclick="showTab('regForm')">立即注册</a></li>
+                    <li><a href="#">忘记密码</a></li>
+                </ul>
+            </div>
+
+            <div class="form" id="regForm" style="display: none;">
+                <input type="text" id="regUser" placeholder="请输入用户名">
+                <div style="position:relative;">
+                    <input type="password" id="regPwd" placeholder="请输入密码">
+                    <span onclick="togglePwd('regPwd')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);cursor:pointer;font-size:12px;color:#8c6d31;">显示</span>
+                </div>
+                <div style="position:relative;">
+                    <input type="password" id="regPwd2" placeholder="请确认密码">
+                    <span onclick="togglePwd('regPwd2')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);cursor:pointer;font-size:12px;color:#8c6d31;">显示</span>
+                </div>
+
+                <div class="but">
+                    <input type="button" value="注册" onclick="userReg()">
+                </div>
+
+                <ul class="register">
+                    <li><a href="javascript:;" onclick="showTab('loginForm')">已有账号？去登录</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <ul>
+                <li><img src="img/wechat.png" alt="微信"></li>
+                <li><img src="img/qq.png" alt="QQ"></li>
+                <li><img src="img/weibo.png" alt="微博"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<header class="header">
+    <div class="logo">鲁大图书</div>
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">图书分类</a></li>
+            <li><a href="#">新书上市</a></li>
+            <li><a href="#">热门推荐</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="javascript:void(0);" onclick="openLogin()">登录/注册</a></li>
+            <li><a href="#" class="cart-icon">🛒 购物车</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <aside class="sidebar-left">
+        <h3>图书分类导航</h3>
+        <ul>
+            <li><a href="#">计算机科学</a></li>
+            <li><a href="#">文学小说</a></li>
+            <li><a href="#">经济管理</a></li>
+            <li><a href="#">历史社科</a></li>
+            <li><a href="#">科普教育</a></li>
+        </ul>
+    </aside>
+
+    <main class="content">
+        <div class="top-banner">
+            <img src="img/banner.jpg" alt="图书横幅">
+        </div>
+
+        <section class="hot-recomment">
+            <h2>热门推荐</h2>
+            <div class="book-list">
+                <div class="book-item">
+                    <div class="book-card">
+                        <img src="img/网页设计基础与实践.jpg" alt="图书封面">
+                        <div class="book-mask">
+                            <div class="mask-buy">立即购买</div>
+                            <div class="mask-price">限时特惠 39.9￥</div>
+                            <div class="mask-tip">加入购物车</div>
+                        </div>
+                    </div>
+                    <p>《网页设计基础与实践》</p>
+                    <p>作者：何勇 王瑶</p>
+                    <p>计算机 / 教材</p>
+                </div>
+                <div class="book-item">
+                    <div class="book-card">
+                        <img src="img/活着.jpg" alt="图书封面">
+                        <div class="book-mask">
+                            <div class="mask-buy">立即购买</div>
+                            <div class="mask-price">限时特惠 39.9￥</div>
+                            <div class="mask-tip">加入购物车</div>
+                        </div>
+                    </div>
+                    <p>《活着》</p>
+                    <p>作者：余华</p>
+                    <p>文学 / 小说</p>
+                </div>
+                <div class="book-item">
+                    <div class="book-card">
+                        <img src="img/人类简史.jpg" alt="图书封面">
+                        <div class="book-mask">
+                            <div class="mask-buy">立即购买</div>
+                            <div class="mask-price">限时特惠 39.9￥</div>
+                            <div class="mask-tip">加入购物车</div>
+                        </div>
+                    </div>
+                    <p>《人类简史》</p>
+                    <p>作者：尤瓦尔·赫拉利</p>
+                    <p>历史 / 社科</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="new-books">
+            <h2>新书上市</h2>
+            <table>
+                <tr>
+                    <th>封面</th>
+                    <th>书名</th>
+                    <th>作者</th>
+                    <th>分类</th>
+                    <th>价格</th>
+                </tr>
+                <tr>
+                    <td><img src="img/数据结构与算法.jpg" alt="封面" style="width: 60px; height: 80px; object-fit: cover;"></td>
+                    <td>《数据结构与算法》</td>
+                    <td>汪沁 奚李峰</td>
+                    <td>计算机</td>
+                    <td>￥60</td>
+                </tr>
+                <tr>
+                    <td><img src="img/平凡的世界.jpg" alt="封面" style="width: 60px; height: 80px; object-fit: cover;"></td>
+                    <td>《平凡的世界》</td>
+                    <td>路遥</td>
+                    <td>文学小说</td>
+                    <td>￥78</td>
+                </tr>
+                <tr>
+                    <td><img src="img/经济学原理.jpg" alt="封面" style="width: 60px; height: 80px; object-fit: cover;"></td>
+                    <td>《经济学原理》</td>
+                    <td>曼昆</td>
+                    <td>经济管理</td>
+                    <td>￥89</td>
+                </tr>
+                <tr>
+                    <td><img src="img/明朝那些事儿.jpg" alt="封面" style="width: 60px; height: 80px; object-fit: cover;"></td>
+                    <td>《明朝那些事儿》</td>
+                    <td>当年明月</td>
+                    <td>历史社科</td>
+                    <td>￥99</td>
+                </tr>
+                <tr>
+                    <td><img src="img/时间简史.jpg" alt="封面" style="width: 60px; height: 80px; object-fit: cover;"></td>
+                    <td>《时间简史》</td>
+                    <td>霍金</td>
+                    <td>科普教育</td>
+                    <td>￥45</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <aside class="sidebar-right">
+        <div class="promo-box">
+            <h4>🎁 促销信息</h4>
+            <div class="promo-item">
+                <p class="promo-title">限时促销</p>
+                <p class="promo-desc">全品类图书 8折优惠</p>
+            </div>
+            <div class="promo-item">
+                <p class="promo-title">新用户专享</p>
+                <p class="promo-desc">注册立减10元</p>
+            </div>
+            <div class="promo-item">
+                <p class="promo-title">满减活动</p>
+                <p class="promo-desc">满100减20,满200减50</p>
+            </div>
+            <div class="promo-item">
+                <p class="promo-title">限时特惠</p>
+                <p class="promo-desc">精选图书限时5折</p>
+            </div>
+        </div>
+    </aside>
+</div>
+
+<script>
+function openLogin() {
+    document.getElementById("loginModal").style.display = "block";
+    showTab('loginForm');
+}
+
+function showTab(tabId) {
+    document.getElementById("loginForm").style.display = "none";
+    document.getElementById("regForm").style.display = "none";
+    document.getElementById("loginTab").classList.remove("active");
+    document.getElementById("regTab").classList.remove("active");
+    if(tabId === 'loginForm'){
+        document.getElementById("loginForm").style.display = "block";
+        document.getElementById("loginTab").classList.add("active");
+    }else{
+        document.getElementById("regForm").style.display = "block";
+        document.getElementById("regTab").classList.add("active");
+    }
+}
+
+function togglePwd(id) {
+    let ipt = document.getElementById(id);
+    let txt = ipt.nextElementSibling;
+    if(ipt.type === "password"){
+        ipt.type = "text";
+        txt.innerText = "隐藏";
+    }else{
+        ipt.type = "password";
+        txt.innerText = "显示";
+    }
+}
+
+function userReg() {
+    let user = document.getElementById("regUser").value.trim();
+    let pwd1 = document.getElementById("regPwd").value;
+    let pwd2 = document.getElementById("regPwd2").value;
+    if(user === "" || pwd1 === "" || pwd2 === ""){
+        alert("请填写完整信息");
+        return;
+    }
+    if(pwd1 !== pwd2){
+        alert("两次密码不一致");
+        return;
+    }
+    localStorage.setItem(user,pwd1);
+    alert("注册成功，请登录");
+    showTab("loginForm");
+}
+
+function userLogin() {
+    let user = document.getElementById("loginUser").value.trim();
+    let pwd = document.getElementById("loginPwd").value;
+    let pwdOk = localStorage.getItem(user);
+    if(pwdOk && pwdOk === pwd){
+        alert("登录成功");
+        document.getElementById("loginModal").style.display = "none";
+    }else{
+        alert("用户名或密码错误");
+    }
+}
+
+
+document.getElementById("loginModal").onclick = function(e){
+    if(e.target === this){
+        this.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
