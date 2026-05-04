@@ -5,7 +5,6 @@
     text-decoration: none;
     box-sizing: border-box; 
 }
-
 body {
     font-family: "微软雅黑";
     background: #f9f5ec;
@@ -15,12 +14,11 @@ body {
 }
 
 body.login-open {
-    background-image: url("/lab4/img/login-bg.jpg"); 
+    background-image: url("img/login-bg.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
-
 .header {
     position: fixed; 
     top: 0;
@@ -32,7 +30,6 @@ body.login-open {
     z-index: 999;
     line-height: 60px; 
 }
-
 .logo {
     float: left; 
     margin-left: 30px;
@@ -40,17 +37,14 @@ body.login-open {
     font-weight: bold;
     color: #fff; 
 }
-
 .nav-menu {
     float: right; 
     margin-right: 30px;
 }
-
 .nav-menu li {
     float: left; 
     margin-left: 35px;
 }
-
 .nav-menu a {
     color: #fff; 
     cursor: pointer;
@@ -60,13 +54,11 @@ body.login-open {
     border-radius: 4px;
     transition: all 0.3s ease; 
 }
-
 .nav-menu a:hover {
     background: rgba(255,255,255,0.2);
     color: #fff;
     transform: scale(1.05);
 }
-
 .nav-menu li:nth-last-child(2) a {
     background: #fff;
     color: #d92b2b;
@@ -75,13 +67,11 @@ body.login-open {
     border-radius: 20px;
     transition: all 0.3s ease;
 }
-
 .nav-menu li:nth-last-child(2) a:hover {
     background: #f3ecd8;
     color: #d92b2b;
     transform: scale(1.08);
 }
-
 .cart-icon {
     color: #fff !important;
     font-weight: bold;
@@ -95,13 +85,11 @@ body.login-open {
     color: #d92b2b !important;
     transform: scale(1.08) !important;
 }
-
 .container {
     width: 1200px; 
     margin: 20px auto; 
     overflow: hidden; 
 }
-
 .top-banner {
     width: 100%;
     height: 240px;
@@ -114,7 +102,6 @@ body.login-open {
     height: 100%;
     object-fit: cover;
 }
-
 .sidebar-left {
     position: relative; 
     float: left; 
@@ -124,38 +111,32 @@ body.login-open {
     border-radius: 5px;
     top: 5px;
 }
-
 .sidebar-left h3 {
     background: #9c7c4a;
     color: #fff;
     padding: 10px; 
     font-size: 16px;
 }
-
 .sidebar-left li {
     padding: 10px 15px; 
     cursor: pointer; 
     border-bottom: 1px dashed #e8d9bf;
     transition: all 0.3s ease;
 }
-
 .sidebar-left li a {
     color: #8c6d31;
 }
-
 .sidebar-left li:hover {
     background: #ebe0c5; 
     color: #8c6d31;
     padding-left: 20px;
     transform: translateX(5px);
 }
-
 .content {
     float: left; 
     width: 760px;
     margin: 0 20px; 
 }
-
 .hot-recomment, .new-books {
     background: #f3ecd8; 
     padding: 15px; 
@@ -163,11 +144,9 @@ body.login-open {
     border: 1px solid #e8d9bf; 
     border-radius: 5px;
 }
-
 .hot-recomment h2, .new-books h2 {
     color: #705528;
 }
-
 .book-card {
     width: 200px;
     height: 260px;
@@ -177,7 +156,6 @@ body.login-open {
     transition: all 0.3s ease;
     background: #f9f5ec;
 }
-
 .book-card img {
     width: 100%;
     height: 100%;
@@ -185,7 +163,6 @@ body.login-open {
     display: block;
     transition: all 0.3s ease;
 }
-
 .book-mask {
     position: absolute; 
     top: 0;
@@ -200,7 +177,6 @@ body.login-open {
     gap: 6px;
     cursor: pointer; 
 }
-
 .mask-buy{
     font-size:18px;
     font-weight:bold;
@@ -215,40 +191,33 @@ body.login-open {
     font-size:13px;
     color:#fff;
 }
-
 .book-card:hover .book-mask {
     display: flex;
 }
-
 .book-item:hover .book-card {
     transform: translateX(8px) scale(1.04);
     box-shadow: 0 6px 20px rgba(140,109,49,0.15);
 }
-
 .book-item p {
     margin-top: 8px;
     text-align: center;
     font-weight: bold;
     color: #8c6d31;
 }
-
 table {
     width: 100%;
     border-collapse: collapse;
     text-align: center;
 }
-
 th, td {
     border: 1px solid #e8d9bf; 
     padding: 10px; 
     color: #8c6d31;
 }
-
 th {
     background: #ebe0c5;
     color: #705528;
 }
-
 table img {
     display: block;
     transition: all 0.3s ease;
@@ -257,14 +226,12 @@ table img:hover {
     transform: scale(1.15);
     box-shadow: 0 4px 12px rgba(140,109,49,0.2);
 }
-
 .sidebar-right {
     position: fixed; 
     top: 80px;
     right: 20px;
     width: 180px;
 }
-
 .book-list {
   overflow: hidden; 
 }
@@ -274,7 +241,6 @@ table img:hover {
   margin-bottom: 15px;
   transition: all 0.3s ease;
 }
-
 .login-modal {
     display: none;
     position: fixed;
@@ -285,7 +251,6 @@ table img:hover {
     background: rgba(140,109,49,0.5);
     z-index: 9999;
 }
-
 #login {
     width: 420px;
     background-color: #f3ecd8;
@@ -297,7 +262,6 @@ table img:hover {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 #login .header {
     width: 340px;
     height: 50px;
@@ -333,7 +297,6 @@ table img:hover {
     margin: 0 10px;
     color: #b9a88c;
 }
-
 #login .main {
     width: 340px;
     margin: 0 auto;
@@ -353,7 +316,6 @@ table img:hover {
     box-sizing: border-box;
     color: #8c6d31;
 }
-
 #login .code-row {
     display: flex;
     justify-content: space-between;
@@ -373,14 +335,12 @@ table img:hover {
     line-height:45px;
     color: #8c6d31;
 }
-
 #login .agree {
     color: #a88e68;
     font-size: 13px;
     margin-top: 15px;
     text-align: center;
 }
-
 #login .but input {
     width: 100%;
     height: 50px;
@@ -397,7 +357,6 @@ table img:hover {
     transform: scale(1.03);
     background-color: #c02626;
 }
-
 #login .register {
     width: 255px;
     margin: 15px auto 0;
@@ -413,7 +372,6 @@ table img:hover {
     font-size: 14px;
     text-decoration: none;
 }
-
 #login .footer {
     width: 100%;
     height: 60px;
@@ -439,7 +397,6 @@ table img:hover {
 #login .footer img:hover {
     transform: rotate(360deg);
 }
-
 .promo-box {
     background: #f3ecd8;
     border: 1px solid #e8d9bf;
@@ -468,14 +425,54 @@ table img:hover {
     background: #ebe0c5;
     transform: translateX(-4px);
 }
-
 .promo-title {
     font-weight: bold;
     color: #b35c00;
     margin-bottom: 4px;
 }
-
 .promo-desc {
     font-size: 13px;
     color: #8c6d31;
+}
+
+.search-icon {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 6px 10px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+.search-icon:hover {
+    background: #fff;
+    color: #d92b2b;
+    transform: rotate(360deg);
+}
+
+.top-banner {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+.top-banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: slideUp 9s infinite ease-in-out;
+}
+.top-banner img:nth-child(1) { animation-delay: 0s; }
+.top-banner img:nth-child(2) { animation-delay: 3s; }
+.top-banner img:nth-child(3) { animation-delay: 6s; }
+
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(100%); }
+    10% { opacity: 1; transform: translateY(0); }
+    30% { opacity: 1; transform: translateY(0); }
+    40% { opacity: 0; transform: translateY(-100%); }
+    100% { opacity: 0; transform: translateY(-100%); }
 }
