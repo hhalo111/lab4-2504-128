@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>鲁大图书</title>
-    <link rel="stylesheet" href="css/lab4-2504-128-index.css">
+    <link rel="stylesheet" href="css/test.css">
 </head>
 <body>
 
@@ -25,7 +25,7 @@
                 <input type="text" id="loginUser" placeholder="请输入用户名/邮箱">
                 <div style="position:relative;">
                     <input type="password" id="loginPwd" placeholder="请输入密码">
-                    <span onclick="togglePwd('loginPwd')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);cursor:pointer;font-size:12px;color:#8c6d31;">显示</span>
+                    <span onclick="togglePwd('loginPwd')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);cursor:pointer;font-size:12px;color:#666;">显示</span>
                 </div>
 
                 <div class="code-row">
@@ -49,11 +49,11 @@
                 <input type="text" id="regUser" placeholder="请输入用户名">
                 <div style="position:relative;">
                     <input type="password" id="regPwd" placeholder="请输入密码">
-                    <span onclick="togglePwd('regPwd')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);cursor:pointer;font-size:12px;color:#8c6d31;">显示</span>
+                    <span onclick="togglePwd('regPwd')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);cursor:pointer;font-size:12px;color:#666;">显示</span>
                 </div>
                 <div style="position:relative;">
                     <input type="password" id="regPwd2" placeholder="请确认密码">
-                    <span onclick="togglePwd('regPwd2')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);cursor:pointer;font-size:12px;color:#8c6d31;">显示</span>
+                    <span onclick="togglePwd('regPwd2')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);cursor:pointer;font-size:12px;color:#666;">显示</span>
                 </div>
 
                 <div class="but">
@@ -85,6 +85,8 @@
             <li><a href="#">新书上市</a></li>
             <li><a href="#">热门推荐</a></li>
             <li><a href="#">关于我们</a></li>
+            <!-- 只加搜索图标 -->
+            <li><a href="#" class="search-icon">🔍</a></li>
             <li><a href="javascript:void(0);" onclick="openLogin()">登录/注册</a></li>
             <li><a href="#" class="cart-icon">🛒 购物车</a></li>
         </ul>
@@ -104,8 +106,11 @@
     </aside>
 
     <main class="content">
+        <!-- 轮播图：你自己放3张图片 -->
         <div class="top-banner">
-            <img src="img/banner.jpg" alt="图书横幅">
+            <img src="img/banner1.jpg" alt="轮播1">
+            <img src="img/banner2.jpg" alt="轮播2">
+            <img src="img/banner3.jpg" alt="轮播3">
         </div>
 
         <section class="hot-recomment">
@@ -124,6 +129,7 @@
                     <p>作者：何勇 王瑶</p>
                     <p>计算机 / 教材</p>
                 </div>
+
                 <div class="book-item">
                     <div class="book-card">
                         <img src="img/活着.jpg" alt="图书封面">
@@ -137,6 +143,7 @@
                     <p>作者：余华</p>
                     <p>文学 / 小说</p>
                 </div>
+
                 <div class="book-item">
                     <div class="book-card">
                         <img src="img/人类简史.jpg" alt="图书封面">
@@ -164,35 +171,35 @@
                     <th>价格</th>
                 </tr>
                 <tr>
-                    <td><img src="img/数据结构与算法.jpg" alt="封面" style="width: 60px; height: 80px; object-fit: cover;"></td>
+                    <td><img src="img/数据结构与算法.jpg" alt="封面" style="width:60px;height:80px;object-fit:cover;"></td>
                     <td>《数据结构与算法》</td>
                     <td>汪沁 奚李峰</td>
                     <td>计算机</td>
                     <td>￥60</td>
                 </tr>
                 <tr>
-                    <td><img src="img/平凡的世界.jpg" alt="封面" style="width: 60px; height: 80px; object-fit: cover;"></td>
+                    <td><img src="img/平凡的世界.jpg" alt="封面" style="width:60px;height:80px;object-fit:cover;"></td>
                     <td>《平凡的世界》</td>
                     <td>路遥</td>
                     <td>文学小说</td>
                     <td>￥78</td>
                 </tr>
                 <tr>
-                    <td><img src="img/经济学原理.jpg" alt="封面" style="width: 60px; height: 80px; object-fit: cover;"></td>
+                    <td><img src="img/经济学原理.jpg" alt="封面" style="width:60px;height:80px;object-fit:cover;"></td>
                     <td>《经济学原理》</td>
                     <td>曼昆</td>
                     <td>经济管理</td>
                     <td>￥89</td>
                 </tr>
                 <tr>
-                    <td><img src="img/明朝那些事儿.jpg" alt="封面" style="width: 60px; height: 80px; object-fit: cover;"></td>
+                    <td><img src="img/明朝那些事儿.jpg" alt="封面" style="width:60px;height:80px;object-fit:cover;"></td>
                     <td>《明朝那些事儿》</td>
                     <td>当年明月</td>
                     <td>历史社科</td>
                     <td>￥99</td>
                 </tr>
                 <tr>
-                    <td><img src="img/时间简史.jpg" alt="封面" style="width: 60px; height: 80px; object-fit: cover;"></td>
+                    <td><img src="img/时间简史.jpg" alt="封面" style="width:60px;height:80px;object-fit:cover;"></td>
                     <td>《时间简史》</td>
                     <td>霍金</td>
                     <td>科普教育</td>
@@ -215,7 +222,7 @@
             </div>
             <div class="promo-item">
                 <p class="promo-title">满减活动</p>
-                <p class="promo-desc">满100减20,满200减50</p>
+                <p class="promo-desc">满100减20，满200减50</p>
             </div>
             <div class="promo-item">
                 <p class="promo-title">限时特惠</p>
@@ -228,14 +235,15 @@
 <script>
 function openLogin() {
     document.getElementById("loginModal").style.display = "block";
+    document.body.classList.add("login-open"); 
     showTab('loginForm');
 }
-
 function showTab(tabId) {
     document.getElementById("loginForm").style.display = "none";
     document.getElementById("regForm").style.display = "none";
     document.getElementById("loginTab").classList.remove("active");
     document.getElementById("regTab").classList.remove("active");
+
     if(tabId === 'loginForm'){
         document.getElementById("loginForm").style.display = "block";
         document.getElementById("loginTab").classList.add("active");
@@ -248,7 +256,7 @@ function showTab(tabId) {
 function togglePwd(id) {
     let ipt = document.getElementById(id);
     let txt = ipt.nextElementSibling;
-    if(ipt.type === "password"){
+    if(ipt.type == "password"){
         ipt.type = "text";
         txt.innerText = "隐藏";
     }else{
@@ -261,11 +269,12 @@ function userReg() {
     let user = document.getElementById("regUser").value.trim();
     let pwd1 = document.getElementById("regPwd").value;
     let pwd2 = document.getElementById("regPwd2").value;
-    if(user === "" || pwd1 === "" || pwd2 === ""){
+
+    if(user==""||pwd1==""||pwd2==""){
         alert("请填写完整信息");
         return;
     }
-    if(pwd1 !== pwd2){
+    if(pwd1 != pwd2){
         alert("两次密码不一致");
         return;
     }
@@ -278,7 +287,8 @@ function userLogin() {
     let user = document.getElementById("loginUser").value.trim();
     let pwd = document.getElementById("loginPwd").value;
     let pwdOk = localStorage.getItem(user);
-    if(pwdOk && pwdOk === pwd){
+
+    if(pwdOk && pwdOk == pwd){
         alert("登录成功");
         document.getElementById("loginModal").style.display = "none";
     }else{
@@ -286,10 +296,10 @@ function userLogin() {
     }
 }
 
-
 document.getElementById("loginModal").onclick = function(e){
-    if(e.target === this){
+    if(e.target == this){
         this.style.display = "none";
+        document.body.classList.remove("login-open"); 
     }
 }
 </script>
